@@ -1,8 +1,17 @@
 
 <p>{{quote.description}}</p>
-<p>{{quote.date|timeCount}}</p>
+<p>Passed: {{quote.date|timeCount}}</p>
 
-<!--   
-  <button class="btn btn-warning" (click) = 'quoteComplete(true)'>Complete</button>
-  <p>This quote will be completed in{{quote.completeTime|timeCount}}hrs</p>
-  <button class="btn btn-warning" (click)='quoteDelete(true)'>Remove This Quote</button -->
+<div>
+  <div class="row">
+    <div class="col-md-4">
+      <button class='btn btn-primary'>Up: 0</button>
+    </div>
+    <div class="col-md-4">
+      <button class='btn btn-primary'>Down: 0</button>
+      </div>
+      <div class="col-md-4">
+      <button class='btn btn-danger' (click)='quoteDel()'>Delete</button>
+      </div>
+  </div>
+</div>

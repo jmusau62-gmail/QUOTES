@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -10,5 +10,10 @@ import { Quote } from '../quote';
 export class QuoteDetailsComponent {
 
   @Input() quote: Quote;
+  @Output() deleteQuote = new EventEmitter();
+
+  quoteDel(){
+    this.deleteQuote.emit();
+  }
   
 }

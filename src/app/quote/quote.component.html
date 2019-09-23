@@ -3,13 +3,13 @@
     <div class="col-md-6">
       <div *ngFor="let quote of quotes; let i = index">
         
-        <h3>{{quote.name}}</h3>
+        <h3>{{quote.quote}}</h3>
         <button (click)="toggleDetails(i)">Toggle Details</button>
-        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' ></app-quote-details>
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (deleteQuote)='quoteDelete(i)'></app-quote-details>
       </div>
     </div>
     <div class="col-md-6">
-      demo 2
+      <app-quote-form (addQuote)='addQuote($event)'></app-quote-form>
     </div>
   </div>
 </div>

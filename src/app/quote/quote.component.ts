@@ -24,4 +24,14 @@ export class QuoteComponent implements OnInit {
    this.quotes[index].showDescription = !this.quotes[index].showDescription;
  }
 
+ quoteDelete(index: number){
+  this.quotes.splice(index,1);
+ }
+
+ addQuote(newQuote){
+   let arrayLength = this.quotes.length;
+   newQuote.id = arrayLength +  1;
+   this.quotes.push(newQuote);
+ }
+
 }

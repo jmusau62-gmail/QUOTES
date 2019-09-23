@@ -5,10 +5,10 @@
 body {
     padding: 2em 23em;
     background:pink;
-    background: rgb(102, 233, 193);
+    background: rgb(241, 117, 117);
 }
 u{
-  color:pink;
+  color: green;
 }
 #submit{
   border-radius: 250px;

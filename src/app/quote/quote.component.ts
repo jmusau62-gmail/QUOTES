@@ -17,7 +17,7 @@ export class QuoteComponent implements OnInit {
  quotes: Quote[] = [
   new Quote(1, 'godbye',"Martin Luther", new Date(2018,9,11)),
   new Quote(2, 'goodmorning',"P Diddy", new Date(2009,3,14)),
-  new Quote(3, 'goodevening',"jay Z", new Date(2019,5,24)),
+  new Quote(3, 'goodevening',"jay Z", new Date(2019,8,20)),
  ] ;
 
  toggleDetails(index: number){

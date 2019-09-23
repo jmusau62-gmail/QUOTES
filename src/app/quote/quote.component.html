@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-6">
       <div *ngFor="let quote of quotes; let i = index">
         
         <h3>{{quote.name}}</h3>
@@ -8,7 +8,7 @@
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote'></app-quote-details>
       </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-6">
       demo 2
     </div>
   </div>

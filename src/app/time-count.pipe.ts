@@ -5,13 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimeCountPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any): any {
     const now = new Date();
-    const nowWithNoDate: any = new Date(now.getFullYear(), now.getMonth(), now.getDay());
-    const timeIntake = Math.abs( nowWithNoDate - value );
-    const secondsInADay = 86400;
-    const timeDifference = timeIntake * 0.0001;
-    const dateCount = timeDifference / secondsInADay;
+    const nowWithNoTime: any = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const daysPassedInSec = Math.abs(nowWithNoTime-value);
+    const dateCount = Math.floor(daysPassedInSec/(1000*60*60*24));
 
     return dateCount;
   }
